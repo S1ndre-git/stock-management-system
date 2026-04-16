@@ -1,10 +1,9 @@
-````markdown
 # Stock Management System
 
 This repository contains two parts:
 
-- **Desktop Application** for inventory operations
-- **Web Dashboard** for report visualization and analytics
+* **Desktop Application** for inventory operations
+* **Web Dashboard** for report visualization and analytics
 
 Users can use either module separately or use both together.
 
@@ -12,8 +11,8 @@ Users can use either module separately or use both together.
 
 ## Repository Structure
 
-- `Stock_Management_System` — desktop application
-- `stock-report-web` — web dashboard
+* `Stock_Management_System` — desktop application
+* `stock-report-web` — web dashboard
 
 ---
 
@@ -23,21 +22,21 @@ Folder: `Stock_Management_System`
 
 ### Main Functions
 
-- Add products
-- View products
-- Sell products
-- Auto-restock products
-- Delete products
-- Generate inventory and profit reports
-- Create and manage the main inventory database
+* Add products
+* View products
+* Sell products
+* Auto-restock products
+* Delete products
+* Generate inventory and profit reports
+* Create and manage the main inventory database
 
 ### Requirements
 
 To run the desktop source code, users need:
 
-- Java
-- Maven
-- JavaFX-compatible environment
+* Java
+* Maven
+* JavaFX-compatible environment
 
 ### How to Run
 
@@ -52,9 +51,9 @@ To run the desktop source code, users need:
 
 Open a terminal inside `Stock_Management_System` and run:
 
-```bash
+```
 mvn clean javafx:run
-````
+```
 
 ### Desktop Database
 
@@ -103,13 +102,13 @@ The web dashboard is built with Spring Boot, so it must be run locally from sour
 
 Open a terminal inside `stock-report-web` and run:
 
-```bash
+```
 mvn spring-boot:run
 ```
 
 Then open:
 
-```text
+```
 http://localhost:8080
 ```
 
