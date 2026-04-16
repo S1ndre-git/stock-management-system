@@ -11,12 +11,12 @@ This repository is organized so users can choose either the desktop app, the web
 
 ## Project Structure
 
-```text
 stock-management-system
 ├── Stock_Management_System      # Desktop application
 ├── stock-report-web             # Web dashboard
 ├── .gitignore
 └── README.md
+
 1. Desktop Application
 
 Folder:
