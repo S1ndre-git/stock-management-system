@@ -1,2 +1,269 @@
-# Stock_Management_System
-Java CLI Stock Management System using SQLite (CPS 3962 Project)
+# Stock Management System
+
+A stock management project with **two integrated parts**:
+
+- **Desktop Application** for inventory operations
+- **Web Dashboard** for report visualization and database-based analytics
+
+This repository is organized so users can choose either the desktop app, the web dashboard, or both together.
+
+---
+
+## Project Structure
+
+```text
+stock-management-system
+├── Stock_Management_System      # Desktop application
+├── stock-report-web             # Web dashboard
+├── .gitignore
+└── README.md
+1. Desktop Application
+
+Folder:
+
+Stock_Management_System
+
+Main purpose:
+
+Add products
+View products
+Sell products
+Auto-restock products
+Delete products
+Generate inventory and profit reports
+Create and manage the main inventory database
+
+This is the main operational system.
+
+2. Web Dashboard
+
+Folder:
+
+stock-report-web
+
+Main purpose:
+
+Visualize report data in a browser
+Display summary cards
+Show charts for sales and profit trends
+Show top product statistics
+Support login and registration
+Allow users to upload/select a desktop-generated .db file
+
+This part is mainly used for report viewing and dashboard-style analytics, not full inventory management.
+
+How the Two Parts Work Together
+
+The desktop application is responsible for creating and updating the inventory database.
+
+The web dashboard is responsible for reading a selected desktop database file and presenting the data through charts and report cards.
+
+Recommended workflow:
+
+Use the desktop application first
+Create product data and sales records
+Generate/update the database
+Open the web dashboard
+Upload/select the generated .db file
+View reports and charts in the browser
+Desktop Application Guide
+Folder
+Stock_Management_System
+What You Need
+
+To run the desktop source code, you need:
+
+Java
+Maven
+JavaFX-compatible environment
+
+If you are using a packaged desktop version in the future, users may not need to install a Java compiler separately. But for the source code in this repository, a Java development environment is required.
+
+Features
+
+The desktop application supports:
+
+Create new products
+Display products in the interface
+Sell products
+Trigger automatic restocking logic
+Delete products
+View details for each product
+Generate an inventory profit report
+Create and use the local inventory database automatically
+How to Run the Desktop Source Code
+Option A: Run in an IDE
+
+Open the folder:
+
+Stock_Management_System
+
+Then:
+
+Open it in IntelliJ IDEA or another Java IDE
+Load the Maven project
+Wait for dependencies to finish loading
+Run the main application class
+Option B: Run with Maven
+
+Open a terminal inside:
+
+Stock_Management_System
+
+Then run:
+
+mvn clean javafx:run
+Desktop Database Behavior
+
+The desktop application uses a local SQLite database file, typically named:
+
+inventory.db
+
+If the database file does not exist, the application can create it automatically during runtime.
+
+Users do not need to manually create the database before using the desktop application.
+
+Who Should Use the Desktop Application
+
+Use the desktop application if you want to:
+
+perform full inventory operations
+create and manage stock records
+update sales data
+generate the main working database
+Web Dashboard Guide
+Folder
+stock-report-web
+What You Need
+
+To run the web dashboard source code, you need:
+
+Java
+Maven
+a Java development environment
+
+So yes, the web source code requires a Java compiler/runtime environment because it is built with Spring Boot.
+
+Important Note
+
+The web dashboard in this repository is a source-code-based web application, not a separately deployed cloud website.
+
+That means users need to run it locally on their computer.
+
+Main Functions
+
+The web dashboard supports:
+
+login and registration
+default admin account initialization
+uploading/selecting a .db file
+summary cards
+sales/profit charts
+top product visualization
+dynamic dashboard updates after loading a selected database
+How to Run the Web Dashboard
+Option A: Run in an IDE
+
+Open the folder:
+
+stock-report-web
+
+Then:
+
+Open it in IntelliJ IDEA or another Java IDE
+Load the Maven project
+Wait for dependencies to finish loading
+Run the Spring Boot main application class
+Option B: Run with Maven
+
+Open a terminal inside:
+
+stock-report-web
+
+Then run:
+
+mvn spring-boot:run
+Open in Browser
+
+After the project starts successfully, open:
+
+http://localhost:8080
+Login
+
+When the authentication database is initialized for the first time, the project creates a default admin account.
+
+Default admin account:
+
+username: admin
+password: admin123
+
+Users can also register a new account on the register page.
+
+Web Database Usage
+
+The web dashboard does not replace the desktop application.
+
+Instead, it reads a selected desktop-generated SQLite database file.
+
+Typical usage flow:
+
+Start the web dashboard
+Log in
+Upload or choose a .db file generated by the desktop application
+Refresh and view charts and summary data
+Who Should Use the Web Dashboard
+
+Use the web dashboard if you want to:
+
+review report data visually
+inspect summary statistics
+analyze product and sales performance in charts
+present inventory data in a more modern dashboard format
+Which Part Requires a Java Compiler?
+Web Dashboard
+
+Yes, it requires Java and Maven to run from source.
+
+Desktop Application
+
+For the source code version, it also requires Java/Maven/JavaFX.
+
+For a future packaged client version, users may not need a Java compiler separately.
+
+So in practical terms:
+
+source code users need a Java development environment for both modules
+packaged desktop users would not need to compile code manually
+Recommended Usage for Different Users
+If you only want inventory operations
+
+Use:
+
+Stock_Management_System
+If you only want report visualization
+
+Use:
+
+stock-report-web
+
+But you still need a valid .db file produced by the desktop application or another compatible database source.
+
+If you want the full experience
+
+Use both:
+
+operate inventory in the desktop app
+open reports in the web dashboard
+Notes
+Runtime-generated files such as databases, temporary files, and build outputs are not required for source distribution.
+The web dashboard may require users to re-upload/select a database file after logging in again, depending on the current session logic.
+The desktop application is the main database producer, while the web dashboard is the main visualization interface.
+Summary
+
+This repository contains:
+
+a desktop stock management system for inventory operations
+a web dashboard for report visualization
+
+Use the desktop application to manage products and sales.
+Use the web dashboard to turn database records into a more visual and interactive reporting experience.
