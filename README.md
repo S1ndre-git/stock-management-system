@@ -5,6 +5,8 @@ This repository contains two modules:
 - **Stock_Management_System** — desktop application
 - **stock-report-web** — web dashboard
 
+A ready-to-use `.exe` desktop release is also available in the **Releases** section on the right side of the repository page.
+
 ---
 
 ## Desktop Application
